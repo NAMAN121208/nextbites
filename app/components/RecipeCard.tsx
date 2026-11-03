@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { Recipe } from "../data/recipes";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
@@ -14,14 +15,16 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-300/60 dark:border-neutral-800 dark:bg-neutral-900">
       {/* Recipe Image with overlay badges */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800">
-        <img
+        <Image
           src={recipe.imageUrl}
           alt={recipe.title}
-          loading="lazy"
-          className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          unoptimized
+          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-40 transition-opacity group-hover:opacity-60" />
-        
+
         {/* Top-left Cuisine Badge */}
         <div className="absolute top-3 left-3">
           <span className="inline-flex items-center rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-neutral-800 shadow-sm backdrop-blur-md dark:bg-neutral-900/90 dark:text-neutral-200">
