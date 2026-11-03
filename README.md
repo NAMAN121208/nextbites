@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextBites 🍽️
 
-## Getting Started
+NextBites is a modern recipe discovery web application built with **Next.js**, **React**, and **TypeScript** using the App Router and Tailwind CSS.
 
-First, run the development server:
+## 📌 Submission Information (Part 1)
+
+- **Open Pull Request**: [https://github.com/NAMAN121208/nextbites/pull/1](https://github.com/NAMAN121208/nextbites/pull/1)
+- **Public Repository**: [https://github.com/NAMAN121208/nextbites](https://github.com/NAMAN121208/nextbites)
+- **Branch**: `home-page` -> `main`
+
+---
+
+## 🚀 Features (Part 1)
+
+1. **Central Recipe Data Store & TypeScript Definitions (`app/data/recipes.ts`)**:
+   - Strongly-typed `Recipe` type definition:
+     - `id`: Unique recipe identifier
+     - `title`: Recipe name
+     - `description`: Rich dish summary
+     - `cuisine`: Cuisine category (Italian, Japanese, American, Thai, Fusion)
+     - `prepTimeMinutes` & `cookTimeMinutes`: Detailed timing
+     - `servings`: Number of servings
+     - `difficulty`: `"Easy" | "Medium" | "Hard"`
+     - `calories`: Nutritional calorie estimate
+     - `imageUrl`: Visual photography
+     - `tags`: Tag taxonomy
+   - Curated collection of diverse, appetizing recipes.
+
+2. **Typed `RecipeCard` Component (`app/components/RecipeCard.tsx`)**:
+   - Reusable card component strictly typed with `{ recipe }: { recipe: Recipe }` (no `any`).
+   - Displays photography with overlay badges for cuisine and difficulty, total preparation/cooking time chips, servings, and calorie counts.
+   - Smooth hover micro-interactions and transitions.
+
+3. **Shared Navigation Layout (`app/layout.tsx` & `app/components/NavBar.tsx`)**:
+   - Sticky global navigation bar featuring the NextBites brand identity and navigation links.
+   - Wraps `{children}` across all current and future routes.
+   - Consistent footer with metadata.
+
+4. **Responsive CSS Grid (`app/page.tsx`)**:
+   - Reads the `recipes` dataset and `.map()`s them into cards.
+   - Stable keys using `key={recipe.id}`.
+   - Grid layout using `grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))` reflowing smoothly across mobile, tablet, and desktop screens.
+
+---
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js (v18.17+ or v20+)
+- npm
+
+### Installation & Running Locally
 
 ```bash
+# Clone the repository
+git clone https://github.com/NAMAN121208/nextbites.git
+cd nextbites
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view NextBites.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+npm run lint
+```
