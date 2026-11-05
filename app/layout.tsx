@@ -14,8 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "NextBites — Discover Delicious Everyday Recipes",
-  description: "Explore delicious, easy-to-cook recipes from around the world on NextBites.",
+  title: {
+    default: "NextBites — Discover Delicious Everyday Recipes",
+    template: "%s | NextBites",
+  },
+  description:
+    "Explore delicious, easy-to-cook recipes from around the world on NextBites. Beautiful ingredients, step-by-step instructions, and culinary inspiration.",
+  keywords: ["recipes", "cooking", "food", "dinner ideas", "Next.js", "easy recipes"],
+  authors: [{ name: "NextBites Culinary Team" }],
+  openGraph: {
+    title: "NextBites — Discover Delicious Everyday Recipes",
+    description: "Explore delicious, easy-to-cook recipes from around the world on NextBites.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

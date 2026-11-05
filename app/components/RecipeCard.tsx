@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Recipe } from "../data/recipes";
 
 export function RecipeCard({ recipe }: { recipe: Recipe }) {
@@ -12,7 +13,10 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
   };
 
   return (
-    <article className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-300/60 dark:border-neutral-800 dark:bg-neutral-900">
+    <Link
+      href={`/recipe/${recipe.id}`}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-neutral-200/80 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-amber-300/60 focus:outline-none focus:ring-2 focus:ring-amber-500/50 dark:border-neutral-800 dark:bg-neutral-900"
+    >
       {/* Recipe Image with overlay badges */}
       <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800">
         <Image
@@ -125,7 +129,7 @@ export function RecipeCard({ recipe }: { recipe: Recipe }) {
           </div>
         )}
       </div>
-    </article>
+    </Link>
   );
 }
 

@@ -21,12 +21,12 @@ export default function Home() {
 
           <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
             <span className="font-semibold text-neutral-800 dark:text-neutral-200">
-              {recipes.length} Recipes Available
+              {recipes.length} Handcrafted Recipes
             </span>
             <span>•</span>
-            <span>Reflows smoothly across screen sizes</span>
+            <span>Reflows smoothly across all viewports</span>
             <span>•</span>
-            <span>Part 1: Home Page & Cards</span>
+            <span>Click any recipe card for ingredients & instructions</span>
           </div>
         </div>
 
