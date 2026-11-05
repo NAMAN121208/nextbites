@@ -10,6 +10,8 @@ export type Recipe = {
   calories: number;
   imageUrl: string;
   tags: string[];
+  ingredients: string[];
+  instructions: string[];
 };
 
 export const recipes: Recipe[] = [
@@ -25,6 +27,25 @@ export const recipes: Recipe[] = [
     calories: 520,
     imageUrl: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=800&q=80",
     tags: ["Chicken", "Creamy", "Keto-Friendly", "Dinner"],
+    ingredients: [
+      "2 large boneless skinless chicken breasts, halved horizontally",
+      "2 tablespoons olive oil, divided",
+      "1 cup heavy cream",
+      "1/2 cup chicken broth",
+      "1 teaspoon garlic powder",
+      "1 cup fresh spinach leaves",
+      "1/2 cup sun-dried tomatoes, drained and sliced",
+      "1/2 cup grated Parmesan cheese",
+      "Salt and freshly cracked black pepper to taste",
+    ],
+    instructions: [
+      "Season chicken breast cutlets generously with salt, pepper, and garlic powder on both sides.",
+      "Heat 1 tablespoon of olive oil in a large skillet over medium-high heat. Sear chicken 5 minutes per side until golden and cooked through. Transfer to a warm plate.",
+      "In the same skillet, add remaining olive oil and sauté minced garlic and sun-dried tomatoes for 1 minute until fragrant.",
+      "Pour in chicken broth and heavy cream, bringing to a gentle simmer. Whisk in grated Parmesan cheese until melted and smooth.",
+      "Add fresh spinach and simmer for 2 minutes until wilted. Return chicken and rested juices to the pan, spooning sauce over top.",
+      "Garnish with fresh parsley and serve hot over pasta or steamed vegetables.",
+    ],
   },
   {
     id: "classic-margherita-pizza",
@@ -38,6 +59,22 @@ export const recipes: Recipe[] = [
     calories: 680,
     imageUrl: "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80",
     tags: ["Vegetarian", "Pizza", "Comfort Food"],
+    ingredients: [
+      "1 ball artisan pizza dough (room temperature)",
+      "1/2 cup crushed San Marzano canned tomatoes",
+      "200g fresh buffalo mozzarella, sliced and drained",
+      "Fresh basil leaves",
+      "2 tablespoons extra virgin olive oil",
+      "Pinch of sea salt and dried oregano",
+    ],
+    instructions: [
+      "Preheat your oven with a pizza stone or baking steel to its highest setting (usually 250°C / 500°F) for at least 45 minutes.",
+      "Gently stretch dough on a lightly floured surface or parchment paper into a 12-inch circle with raised edges.",
+      "Spread crushed tomatoes evenly across the dough, leaving a 1/2-inch border for the crust.",
+      "Arrange fresh mozzarella slices over the sauce and drizzle with olive oil.",
+      "Bake for 10-12 minutes until the crust is blistered, golden brown, and cheese is bubbly.",
+      "Top with fresh basil leaves immediately upon removing from oven, slice, and enjoy.",
+    ],
   },
   {
     id: "spicy-shoyu-ramen",
@@ -51,6 +88,25 @@ export const recipes: Recipe[] = [
     calories: 610,
     imageUrl: "https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80",
     tags: ["Noodles", "Soup", "Spicy", "Authentic"],
+    ingredients: [
+      "2 portions fresh ramen noodles",
+      "4 cups rich chicken or pork broth",
+      "3 tablespoons Japanese shoyu (soy sauce)",
+      "1 tablespoon chili oil with crisp garlic",
+      "1 tablespoon toasted sesame oil",
+      "2 soft-boiled ramen eggs (ajitsuke tamago), halved",
+      "4 slices braised chashu pork belly",
+      "2 sheets roasted nori seaweed",
+      "Chopped scallions and menma bamboo shoots",
+    ],
+    instructions: [
+      "In a medium saucepan, combine broth, shoyu, sesame oil, and chili oil. Bring to a gentle simmer for 15 minutes to marry flavors.",
+      "Bring a separate pot of water to a rolling boil. Cook fresh ramen noodles according to package directions (about 90 seconds for firm texture).",
+      "Drain noodles thoroughly and divide between two deep warmed ramen bowls.",
+      "Ladle piping hot broth over the noodles, swirling gently to untangle.",
+      "Artfully arrange sliced chashu, halved marinated eggs, nori sheets, menma, and generous chopped scallions on top.",
+      "Drizzle with additional chili oil if desired and serve piping hot.",
+    ],
   },
   {
     id: "avocado-toast-poached-egg",
@@ -64,6 +120,24 @@ export const recipes: Recipe[] = [
     calories: 340,
     imageUrl: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=800&q=80",
     tags: ["Breakfast", "Healthy", "Quick & Easy"],
+    ingredients: [
+      "2 thick slices artisan sourdough bread",
+      "1 ripe Hass avocado",
+      "2 fresh pasture-raised eggs",
+      "1 tablespoon white vinegar (for poaching)",
+      "1/2 lemon, juiced",
+      "1/4 teaspoon crushed red pepper flakes",
+      "Flaky sea salt and cracked black pepper",
+      "Handful of microgreens or radish slices for garnish",
+    ],
+    instructions: [
+      "Toast sourdough slices in a toaster or skillet with olive oil until golden and crisp.",
+      "In a small bowl, mash the avocado flesh with fresh lemon juice, salt, and pepper to desired texture.",
+      "Bring a shallow saucepan of water to a gentle simmer. Add vinegar and create a gentle vortex with a spoon.",
+      "Carefully drop eggs into the center one by one. Poach for 3 minutes for silky, liquid yolks.",
+      "Generously spread mashed avocado over warm toasted sourdough.",
+      "Top each toast with a drained poached egg, sprinkle with red pepper flakes and flaky sea salt, and garnish with microgreens.",
+    ],
   },
   {
     id: "thai-green-curry",
@@ -77,6 +151,27 @@ export const recipes: Recipe[] = [
     calories: 490,
     imageUrl: "https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?auto=format&fit=crop&w=800&q=80",
     tags: ["Curry", "Spicy", "Gluten-Free"],
+    ingredients: [
+      "500g boneless chicken thigh, sliced into bite-sized pieces",
+      "3 tablespoons authentic Thai green curry paste",
+      "1 can (400ml) full-fat coconut milk",
+      "1/2 cup chicken stock",
+      "1 cup bamboo shoots, drained",
+      "1 Thai eggplant or bell pepper, sliced",
+      "1 tablespoon fish sauce",
+      "1 tablespoon palm sugar or brown sugar",
+      "Fresh Thai basil leaves and kaffir lime leaves",
+      "Steamed Jasmine rice for serving",
+    ],
+    instructions: [
+      "Heat 2 tablespoons of coconut cream from the top of the can in a wok or deep skillet over medium heat.",
+      "Add green curry paste and fry for 2-3 minutes until fragrant and oil begins to separate.",
+      "Add chicken slices and stir-fry until the surface turns opaque (about 3 minutes).",
+      "Pour in remaining coconut milk and chicken stock. Add bruised kaffir lime leaves and bring to a simmer.",
+      "Add sliced eggplant and bamboo shoots. Simmer gently for 10-12 minutes until vegetables are tender and chicken is cooked through.",
+      "Season with fish sauce and palm sugar. Remove from heat and stir in Thai basil leaves.",
+      "Serve warm over fluffy jasmine rice.",
+    ],
   },
   {
     id: "acai-berry-smoothie-bowl",
@@ -90,5 +185,27 @@ export const recipes: Recipe[] = [
     calories: 310,
     imageUrl: "https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=80",
     tags: ["Vegan", "Superfood", "Breakfast", "Refreshing"],
+    ingredients: [
+      "1 frozen unsweetened açaí packet (100g)",
+      "1 frozen ripe banana",
+      "1/2 cup frozen mixed berries (strawberries, blueberries)",
+      "1/4 cup almond milk or coconut water",
+      "Toppings: Fresh strawberries, blueberries, banana slices",
+      "2 tablespoons artisan gluten-free granola",
+      "1 teaspoon chia seeds",
+      "1 teaspoon unsweetened shredded coconut flakes",
+    ],
+    instructions: [
+      "Break the frozen açaí packet into pieces and place into a high-powered blender.",
+      "Add frozen banana, frozen mixed berries, and a splash of almond milk.",
+      "Blend on low speed, using the tamper to push ingredients into the blades, until smooth, ultra-thick, and scoopable like soft serve.",
+      "Transfer into a wide chilled breakfast bowl using a spatula.",
+      "Arrange fresh berry slices, granola, chia seeds, and coconut flakes in neat decorative rows across the surface.",
+      "Serve immediately with a spoon.",
+    ],
   },
 ];
+
+export function getRecipe(id: string): Recipe | undefined {
+  return recipes.find((recipe) => recipe.id === id);
+}
